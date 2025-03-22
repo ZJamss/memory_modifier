@@ -57,15 +57,6 @@ MainWindow::MainWindow(QWidget *parent)
                                                QLineEdit::Normal, item->text(), &ok);
         if(ok) item->setText(newVal);
     });
-    connect(ui->btnTheme, &QPushButton::toggled, this, [=](bool checked){
-        QString style = checked ?
-                            "QWidget { background: #333; color: #EEE; }"
-                            "QLineEdit, QComboBox { background: #444; border: 1px solid #555; }"
-                            "QPushButton { background: #666; border: 1px solid #555; }"
-                            "QTreeWidget, QListWidget { background: #2A2A2A; }"
-                                : "";
-        qApp->setStyleSheet(style);
-    });
 
     // 初始状态
     refreshProcessList();

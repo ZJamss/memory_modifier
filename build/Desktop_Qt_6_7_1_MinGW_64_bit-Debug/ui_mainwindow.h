@@ -64,7 +64,6 @@ public:
     QPushButton *btnAddGroup;
     QPushButton *btnAddRecord;
     QPushButton *btnDelete;
-    QPushButton *btnTheme;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -271,12 +270,6 @@ public:
 
         verticalLayout_2->addWidget(groupBox_4);
 
-        btnTheme = new QPushButton(centralwidget);
-        btnTheme->setObjectName("btnTheme");
-        btnTheme->setCheckable(true);
-
-        verticalLayout_2->addWidget(btnTheme);
-
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName("menubar");
@@ -316,7 +309,6 @@ public:
         btnAddGroup->setText(QCoreApplication::translate("MainWindow", "\346\226\260\345\273\272\345\210\206\347\273\204", nullptr));
         btnAddRecord->setText(QCoreApplication::translate("MainWindow", "\346\226\260\345\273\272\350\256\260\345\275\225", nullptr));
         btnDelete->setText(QCoreApplication::translate("MainWindow", "\345\210\240\351\231\244", nullptr));
-        btnTheme->setText(QCoreApplication::translate("MainWindow", "\345\244\234\351\227\264\346\250\241\345\274\217", nullptr));
     } // retranslateUi
 
 };

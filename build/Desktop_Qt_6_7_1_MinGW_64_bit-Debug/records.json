@@ -4,10 +4,20 @@
         "records": [
             {
                 "base": "0x006A9F38",
-                "name": "阳光修改",
+                "name": "修改阳光",
                 "offsets": [
                     "0x768",
                     "0x5560"
+                ],
+                "type": 0,
+                "value": "677"
+            },
+            {
+                "base": "0x006A9EC0",
+                "name": "金币修改",
+                "offsets": [
+                    "0x82C",
+                    "0x208"
                 ],
                 "type": 0,
                 "value": "677"

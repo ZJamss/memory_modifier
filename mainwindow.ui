@@ -268,16 +268,6 @@
       </layout>
      </widget>
     </item>
-    <item>
-     <widget class="QPushButton" name="btnTheme">
-      <property name="text">
-       <string>夜间模式</string>
-      </property>
-      <property name="checkable">
-       <bool>true</bool>
-      </property>
-     </widget>
-    </item>
    </layout>
   </widget>
   <widget class="QMenuBar" name="menubar">
