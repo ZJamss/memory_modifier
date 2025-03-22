@@ -223,7 +223,13 @@ void MainWindow::addGroup()
 
 void MainWindow::addRecord()
 {
-    QTreeWidgetItem *parent = findOrCreateDefaultGroup();
+    // 获取当前选中项
+    QTreeWidgetItem *parent = ui->treeWidgetRecords->currentItem();
+
+    // 验证选中项有效性
+    if(!parent || parent->data(0, Qt::UserRole) != "group") {
+        parent = findOrCreateDefaultGroup();
+    }
 
     bool ok;
     QString name = QInputDialog::getText(this, "新建记录", "记录名称：",
@@ -238,7 +244,7 @@ void MainWindow::addRecord()
             {"value", ui->editValue->text()}
         };
 
-        QTreeWidgetItem *item = new QTreeWidgetItem();
+        QTreeWidgetItem *item = new QTreeWidgetItem(parent);
         item->setText(0, name);
         item->setData(0, Qt::UserRole, "record");
         item->setData(0, Qt::UserRole+1, recordData);

@@ -72,7 +72,7 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName("MainWindow");
-        MainWindow->resize(800, 680);
+        MainWindow->resize(800, 733);
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName("centralwidget");
         verticalLayout_2 = new QVBoxLayout(centralwidget);
@@ -86,7 +86,6 @@ public:
         horizontalLayout->setObjectName("horizontalLayout");
         comboProcess = new QComboBox(groupBox);
         comboProcess->setObjectName("comboProcess");
-        comboProcess->setMinimumHeight(28);
         comboProcess->setStyleSheet(QString::fromUtf8("QComboBox { \n"
 "                      padding: 2px 8px;\n"
 "                      background: palette(base);\n"
@@ -96,17 +95,12 @@ public:
 
         editFilter = new QLineEdit(groupBox);
         editFilter->setObjectName("editFilter");
-        editFilter->setMinimumHeight(28);
 
         horizontalLayout->addWidget(editFilter);
 
         btnRefresh = new QPushButton(groupBox);
         btnRefresh->setObjectName("btnRefresh");
-        btnRefresh->setStyleSheet(QString::fromUtf8("QPushButton { \n"
-"                      padding: 4px 8px;\n"
-"                      min-width: 60px;\n"
-"                      border-radius: 3px;\n"
-"                    }"));
+        btnRefresh->setStyleSheet(QString::fromUtf8(""));
 
         horizontalLayout->addWidget(btnRefresh);
 
@@ -128,7 +122,6 @@ public:
 
         editBase = new QLineEdit(groupBox_2);
         editBase->setObjectName("editBase");
-        editBase->setMinimumHeight(28);
 
         horizontalLayout_2->addWidget(editBase);
 
@@ -142,7 +135,6 @@ public:
         vboxLayout->setObjectName("vboxLayout");
         listOffsets = new QListWidget(groupBox1);
         listOffsets->setObjectName("listOffsets");
-        listOffsets->setMaximumHeight(160);
         listOffsets->setStyleSheet(QString::fromUtf8("\n"
 "                            QListWidget::item { \n"
 "                              height: 24px;\n"
@@ -213,13 +205,11 @@ public:
         horizontalLayout_5->setObjectName("horizontalLayout_5");
         comboBoxType = new QComboBox(groupBox_3);
         comboBoxType->setObjectName("comboBoxType");
-        comboBoxType->setMinimumHeight(28);
 
         horizontalLayout_5->addWidget(comboBoxType);
 
         editValue = new QLineEdit(groupBox_3);
         editValue->setObjectName("editValue");
-        editValue->setMinimumHeight(28);
 
         horizontalLayout_5->addWidget(editValue);
 
@@ -237,8 +227,10 @@ public:
         verticalLayout->setSpacing(6);
         verticalLayout->setObjectName("verticalLayout");
         treeWidgetRecords = new QTreeWidget(groupBox_4);
+        QTreeWidgetItem *__qtreewidgetitem = new QTreeWidgetItem();
+        __qtreewidgetitem->setText(0, QString::fromUtf8("1"));
+        treeWidgetRecords->setHeaderItem(__qtreewidgetitem);
         treeWidgetRecords->setObjectName("treeWidgetRecords");
-        treeWidgetRecords->setMaximumHeight(240);
         treeWidgetRecords->setStyleSheet(QString::fromUtf8("\n"
 "                      QTreeWidget::item { \n"
 "                        height: 28px;\n"
@@ -251,6 +243,7 @@ public:
 "                        border: 1px solid palette(highlight);\n"
 "                      }\n"
 "                    "));
+        treeWidgetRecords->setHeaderHidden(true);
 
         verticalLayout->addWidget(treeWidgetRecords);
 

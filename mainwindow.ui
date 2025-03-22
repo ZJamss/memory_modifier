@@ -1,121 +1,104 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
-  <class>MainWindow</class>
-  <widget class="QMainWindow" name="MainWindow">
-    <property name="geometry">
-      <rect>
-        <x>0</x>
-        <y>0</y>
-        <width>800</width>
-        <height>680</height>
-      </rect>
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>733</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>游戏内存修改器</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout_2">
+    <property name="spacing">
+     <number>8</number>
     </property>
-    <property name="windowTitle">
-      <string>游戏内存修改器</string>
+    <property name="margin" stdset="0">
+     <number>8</number>
     </property>
-    <widget class="QWidget" name="centralwidget">
-      <layout class="QVBoxLayout" name="verticalLayout_2">
-        <property name="spacing">
-          <number>8</number>
-        </property>
-        <property name="margin">
-          <number>8</number>
-        </property>
-        <item>
-          <widget class="QGroupBox" name="groupBox">
-            <property name="title">
-              <string>进程选择</string>
-            </property>
-            <layout class="QHBoxLayout" name="horizontalLayout">
-              <property name="spacing">
-                <number>6</number>
-              </property>
-              <item>
-                <widget class="QComboBox" name="comboProcess">
-                  <property name="minimumHeight">
-                    <number>28</number>
-                  </property>
-                  <property name="styleSheet">
-                    <string notr="true">QComboBox { 
+    <item>
+     <widget class="QGroupBox" name="groupBox">
+      <property name="title">
+       <string>进程选择</string>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <property name="spacing">
+        <number>6</number>
+       </property>
+       <item>
+        <widget class="QComboBox" name="comboProcess">
+         <property name="styleSheet">
+          <string notr="true">QComboBox { 
                       padding: 2px 8px;
                       background: palette(base);
                     }</string>
-                  </property>
-                </widget>
-              </item>
-              <item>
-                <widget class="QLineEdit" name="editFilter">
-                  <property name="minimumHeight">
-                    <number>28</number>
-                  </property>
-                  <property name="placeholderText">
-                    <string>过滤进程名称...</string>
-                  </property>
-                </widget>
-              </item>
-              <item>
-                <widget class="QPushButton" name="btnRefresh">
-                  <property name="text">
-                    <string>刷新</string>
-                  </property>
-                  <property name="styleSheet">
-                    <string notr="true">QPushButton { 
-                      padding: 4px 8px;
-                      min-width: 60px;
-                      border-radius: 3px;
-                    }</string>
-                  </property>
-                </widget>
-              </item>
-            </layout>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="editFilter">
+         <property name="placeholderText">
+          <string>过滤进程名称...</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="btnRefresh">
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <property name="text">
+          <string>刷新</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QGroupBox" name="groupBox_2">
+      <property name="title">
+       <string>地址计算</string>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_3">
+       <property name="spacing">
+        <number>6</number>
+       </property>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_2">
+         <property name="spacing">
+          <number>6</number>
+         </property>
+         <item>
+          <widget class="QLabel" name="label">
+           <property name="text">
+            <string>基址 (HEX):</string>
+           </property>
           </widget>
-        </item>
-        <item>
-          <widget class="QGroupBox" name="groupBox_2">
-            <property name="title">
-              <string>地址计算</string>
-            </property>
-            <layout class="QVBoxLayout" name="verticalLayout_3">
-              <property name="spacing">
-                <number>6</number>
-              </property>
-              <item>
-                <layout class="QHBoxLayout" name="horizontalLayout_2">
-                  <property name="spacing">
-                    <number>6</number>
-                  </property>
-                  <item>
-                    <widget class="QLabel">
-                      <property name="text">
-                        <string>基址 (HEX):</string>
-                      </property>
-                    </widget>
-                  </item>
-                  <item>
-                    <widget class="QLineEdit" name="editBase">
-                      <property name="minimumHeight">
-                        <number>28</number>
-                      </property>
-                    </widget>
-                  </item>
-                </layout>
-              </item>
-              <item>
-                <widget class="QGroupBox">
-                  <property name="title">
-                    <string>偏移量列表</string>
-                  </property>
-                  <layout class="QVBoxLayout">
-                    <property name="spacing">
-                      <number>4</number>
-                    </property>
-                    <item>
-                      <widget class="QListWidget" name="listOffsets">
-                        <property name="maximumHeight">
-                          <number>160</number>
-                        </property>
-                        <property name="styleSheet">
-                          <string notr="true">
+         </item>
+         <item>
+          <widget class="QLineEdit" name="editBase"/>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <widget class="QGroupBox" name="groupBox">
+         <property name="title">
+          <string>偏移量列表</string>
+         </property>
+         <layout class="QVBoxLayout">
+          <property name="spacing">
+           <number>4</number>
+          </property>
+          <item>
+           <widget class="QListWidget" name="listOffsets">
+            <property name="styleSheet">
+             <string notr="true">
                             QListWidget::item { 
                               height: 24px;
                               padding: 2px 4px;
@@ -127,122 +110,111 @@
                               border: 1px solid palette(highlight);
                             }
                           </string>
-                        </property>
-                      </widget>
-                    </item>
-                    <item>
-                      <layout class="QHBoxLayout">
-                        <item>
-                          <widget class="QPushButton" name="btnAddOffset">
-                            <property name="toolTip">
-                              <string>添加偏移量</string>
-                            </property>
-                            <property name="text">
-                              <string>+</string>
-                            </property>
-                            <property name="styleSheet">
-                              <string notr="true">QPushButton { 
+            </property>
+           </widget>
+          </item>
+          <item>
+           <layout class="QHBoxLayout">
+            <item>
+             <widget class="QPushButton" name="btnAddOffset">
+              <property name="toolTip">
+               <string>添加偏移量</string>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QPushButton { 
                                 padding: 0px;
                                 min-width: 24px;
                                 max-width: 24px;
                                 border-radius: 12px;
                               }</string>
-                            </property>
-                          </widget>
-                        </item>
-                        <item>
-                          <widget class="QPushButton" name="btnRemoveOffset">
-                            <property name="toolTip">
-                              <string>删除选中偏移量</string>
-                            </property>
-                            <property name="text">
-                              <string>-</string>
-                            </property>
-                            <property name="styleSheet">
-                              <string notr="true">QPushButton { 
+              </property>
+              <property name="text">
+               <string>+</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="btnRemoveOffset">
+              <property name="toolTip">
+               <string>删除选中偏移量</string>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QPushButton { 
                                 padding: 0px;
                                 min-width: 24px;
                                 max-width: 24px;
                                 border-radius: 12px;
                               }</string>
-                            </property>
-                          </widget>
-                        </item>
-                      </layout>
-                    </item>
-                  </layout>
-                </widget>
-              </item>
-              <item>
-                <layout class="QHBoxLayout" name="horizontalLayout_4">
-                  <item>
-                    <widget class="QPushButton" name="btnCalculate">
-                      <property name="text">
-                        <string>计算地址</string>
-                      </property>
-                    </widget>
-                  </item>
-                  <item>
-                    <widget class="QLabel" name="labelAddress">
-                      <property name="text">
-                        <string>计算结果：</string>
-                      </property>
-                    </widget>
-                  </item>
-                </layout>
-              </item>
-            </layout>
-          </widget>
-        </item>
-        <item>
-          <widget class="QGroupBox" name="groupBox_3">
-            <property name="title">
-              <string>数值修改</string>
-            </property>
-            <layout class="QHBoxLayout" name="horizontalLayout_5">
-              <property name="spacing">
-                <number>8</number>
               </property>
-              <item>
-                <widget class="QComboBox" name="comboBoxType">
-                  <property name="minimumHeight">
-                    <number>28</number>
-                  </property>
-                </widget>
-              </item>
-              <item>
-                <widget class="QLineEdit" name="editValue">
-                  <property name="minimumHeight">
-                    <number>28</number>
-                  </property>
-                </widget>
-              </item>
-              <item>
-                <widget class="QPushButton" name="btnModify">
-                  <property name="text">
-                    <string>修改</string>
-                  </property>
-                </widget>
-              </item>
-            </layout>
-          </widget>
-        </item>
-        <item>
-          <widget class="QGroupBox" name="groupBox_4">
-            <property name="title">
-              <string>修改记录</string>
-            </property>
-            <layout class="QVBoxLayout" name="verticalLayout">
-              <property name="spacing">
-                <number>6</number>
+              <property name="text">
+               <string>-</string>
               </property>
-              <item>
-                <widget class="QTreeWidget" name="treeWidgetRecords">
-                  <property name="maximumHeight">
-                    <number>240</number>
-                  </property>
-                  <property name="styleSheet">
-                    <string notr="true">
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_4">
+         <item>
+          <widget class="QPushButton" name="btnCalculate">
+           <property name="text">
+            <string>计算地址</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="labelAddress">
+           <property name="text">
+            <string>计算结果：</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QGroupBox" name="groupBox_3">
+      <property name="title">
+       <string>数值修改</string>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_5">
+       <property name="spacing">
+        <number>8</number>
+       </property>
+       <item>
+        <widget class="QComboBox" name="comboBoxType"/>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="editValue"/>
+       </item>
+       <item>
+        <widget class="QPushButton" name="btnModify">
+         <property name="text">
+          <string>修改</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QGroupBox" name="groupBox_4">
+      <property name="title">
+       <string>修改记录</string>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <property name="spacing">
+        <number>6</number>
+       </property>
+       <item>
+        <widget class="QTreeWidget" name="treeWidgetRecords">
+         <property name="styleSheet">
+          <string notr="true">
                       QTreeWidget::item { 
                         height: 28px;
                         padding: 2px;
@@ -254,64 +226,72 @@
                         border: 1px solid palette(highlight);
                       }
                     </string>
-                  </property>
-                </widget>
-              </item>
-              <item>
-                <layout class="QHBoxLayout" name="horizontalLayout_6">
-                  <property name="spacing">
-                    <number>6</number>
-                  </property>
-                  <item>
-                    <widget class="QPushButton" name="btnAddGroup">
-                      <property name="text">
-                        <string>新建分组</string>
-                      </property>
-                    </widget>
-                  </item>
-                  <item>
-                    <widget class="QPushButton" name="btnAddRecord">
-                      <property name="text">
-                        <string>新建记录</string>
-                      </property>
-                    </widget>
-                  </item>
-                  <item>
-                    <widget class="QPushButton" name="btnDelete">
-                      <property name="text">
-                        <string>删除</string>
-                      </property>
-                    </widget>
-                  </item>
-                </layout>
-              </item>
-            </layout>
+         </property>
+         <property name="headerHidden">
+          <bool>true</bool>
+         </property>
+         <column>
+          <property name="text">
+           <string notr="true">1</string>
+          </property>
+         </column>
+        </widget>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_6">
+         <property name="spacing">
+          <number>6</number>
+         </property>
+         <item>
+          <widget class="QPushButton" name="btnAddGroup">
+           <property name="text">
+            <string>新建分组</string>
+           </property>
           </widget>
-        </item>
-        <item>
-          <widget class="QPushButton" name="btnTheme">
-            <property name="text">
-              <string>夜间模式</string>
-            </property>
-            <property name="checkable">
-              <bool>true</bool>
-            </property>
+         </item>
+         <item>
+          <widget class="QPushButton" name="btnAddRecord">
+           <property name="text">
+            <string>新建记录</string>
+           </property>
           </widget>
-        </item>
+         </item>
+         <item>
+          <widget class="QPushButton" name="btnDelete">
+           <property name="text">
+            <string>删除</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
       </layout>
-    </widget>
-    <widget class="QMenuBar" name="menubar">
-      <property name="geometry">
-        <rect>
-          <x>0</x>
-          <y>0</y>
-          <width>800</width>
-          <height>24</height>
-        </rect>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="btnTheme">
+      <property name="text">
+       <string>夜间模式</string>
       </property>
-    </widget>
-    <widget class="QStatusBar" name="statusbar"/>
+      <property name="checkable">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+   </layout>
   </widget>
-  <resources/>
-  <connections/>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>24</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
 </ui>
